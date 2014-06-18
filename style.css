@@ -1,0 +1,453 @@
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+.ui-loader {
+	display:none;
+}
+
+div[data-role='page'] {
+	outline:none!important;
+}
+
+.float-l {
+	float:left;
+}
+.float-r {
+	float:right;
+}
+.align-r {
+	text-align:right;
+}
+.align-l {
+	text-align:right;
+}
+
+
+/****************************
+TYPOGRAPHY
+*****************************/
+
+body {
+	font-size:16px;
+	font-family:source sans pro, sans-serif;
+	color:#3C2414;
+}
+
+h1 {
+	max-width:95%;
+	margin: .25em 0;
+	font-size:24px;
+	font-family:alegreya, serif;
+	line-height:26px;
+}
+
+a {
+	color: #33b7e6;
+	text-decoration:none;
+}
+
+strong {
+	color:#33b7e6;
+}
+
+
+.wrapper {
+	background: url(assets/images/iphone5_screen.png);
+	background-size: contain;
+	background-repeat:no-repeat;
+	height: 811px;
+	width: 384px;
+	position: absolute;
+	margin: auto;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+}
+.frame {
+	width:320px;
+	height:576px;
+	position:absolute;
+	left:0;
+	right:0;
+	top:0;
+	bottom:0;
+	margin:auto;
+	overflow:hidden;
+	z-index:1000;
+
+}
+
+.content-wrapper {
+	position:relative;
+	top:27px;
+}
+.container {
+	width:100%;
+	position:relative;
+}
+
+header {
+	height:44px;
+	padding: 2.25% 4%;
+	border-bottom:1px solid #efedec;
+	z-index:10;
+	position:relative;
+	top:0px;
+	background:white;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+}
+
+header .nav, header .logo {
+	float:left;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+}
+header .nav {
+	width:25%;
+	padding-right:2.5%;
+	position:relative;
+	top:4px;
+}
+
+header .nav img {
+	max-width:31%;
+}
+
+header .logo {
+	width:50%;
+	padding-right:2.5%;
+	text-align:center;
+	opacity:0;
+	-webkit-transition:opacity .5s ease-in-out;
+	transition:opacity .5s ease-in-out;}
+
+header .logo img {
+	max-width:72%;
+	margin:0 auto;
+	position:relative;
+	top:1px;
+	left:5px;
+}
+
+header .share {
+	width:25%;
+	float:right;
+	position:relative;
+	top:4px;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+}
+
+header .share img {
+	max-width:35%;
+	float:right;
+}
+
+#content {
+	opacity:0;
+	padding:0 4%;
+	margin:0 auto;
+	max-height:500px;
+	-webkit-transition:opacity .5s ease-in-out;
+	transition:opacity .5s ease-in-out;
+}
+.ready {overflow-y:auto;}
+.faded {opacity:1!important;}
+
+#content p {
+	font-size:16px;
+	font-family:source sans pro;
+	font-weight:300;
+	line-height:1.3;
+	color:#666;
+}
+.featured-image {
+	width:100%;
+	height:160px;
+	margin-top:1em;
+}
+
+.meta {margin-top:.5em;}
+.meta > * {
+	font-size:14px;
+}
+
+.meta .publisher {
+	width:220px;
+}
+.meta img {
+	max-width:25px;
+	margin-right:2.5%;
+	float:left;
+}
+
+.meta a {
+	display:block;
+}
+
+.meta a, .meta .date {
+	position:relative;
+	top:4px;
+}
+.meta .date {
+	color:#ADAAA3;
+	font-style:italic;
+}
+
+p.lead {margin-top:.25em;}
+p.final {margin-bottom:4em;}
+.interactionBox {
+	position:relative;
+	height:35px;
+	width: 320px;
+	z-index:10;
+	}
+
+.interactionBox .bottom {
+	position:relative;
+	height:100%;
+	bottom:10px;
+	width:100%;
+	margin:0 auto;
+	padding:0 4%;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+}
+
+
+.interactionBox .left, .interactionBox .center {
+	float:left;
+}
+.interactionBox .left {
+	width:25%;
+}
+.interactionBox .right {
+	width:25%;
+	float:right;
+}
+
+.centButton, .centBase {
+	position:absolute;
+	width:50px;
+	height:50px;
+	margin:0 auto;
+	z-index: 100;
+	left: 50%!important;
+	top:-40px;
+
+}
+
+.centButton {
+	margin-top:-487px;
+
+	z-index:999999;
+	cursor:pointer;
+}
+.centBase {
+	opacity:0;
+}
+
+.overdriveCount, .overdriveCountbg {
+	position: absolute;
+	margin: 0 auto;
+	font-size: 28px;
+	text-align: center;
+	width: 60px;
+	left: 50%;
+	margin-left: -30px;
+	color:#fff;
+}
+.overdriveCountbg {
+	top: -85px;
+	padding-bottom: 100px;
+	z-index:10;
+	background: #e9a93e;
+	opacity:.85;
+	display: none;
+}
+
+.overdriveCount {
+	z-index:20;
+}
+
+.swipeIndicator {
+	position:absolute;
+	width: 40px;
+	height: 40px;
+	background:url(assets/images/swipeready.png);
+	left: 50%;
+	margin-left: -20px;
+	top: -75px;
+/*	-webkit-clip-path: polygon(0% 0, 0% 0, 0 0%, 50% 50%, 0% 100%, 100% 100%);
+*/	-webkit-transition: width .2s ease-in,
+							height .2s ease-in,
+							top .2s ease-in;
+	transition: width .2s ease-in,
+							height .2s ease-in,
+							top .2s ease-in;
+	opacity:0;
+}
+
+.swipeReady {
+	width: 100%;
+	height: 45px;
+	margin-left: -102px;
+	top: -119px;
+	opacity: .85;
+}
+
+
+.thanks-box {
+	width:320px;
+	position:absolute;
+	top:44px;
+	background:#3db8e4;
+	height:25px;
+	display:none;
+	z-index:999999;
+}
+
+.thanks-box p {
+	color:#fff;
+	font-size:13px;
+	margin: 3px 0 0 0;
+	text-align:center;
+}
+
+
+
+/************************
+FLIP ANIMATION
+************************/
+
+@-webkit-keyframes flipCoin {
+	0% {
+		margin-top:0;
+	}
+	25% {
+		margin-top:-180px;
+	}
+	100% {
+		margin-top:-50px;
+	}
+
+}
+
+@keyframes flipCoin {
+	0% {
+		margin-top:0;
+	}
+	25% {
+		margin-top:-180px;
+	}
+	100% {
+		margin-top:-50px;
+	}
+
+}
+
+.flipCoin {
+ -webkit-animation-name: flipCoin;
+ animation-name: flipCoin;
+ -webkit-animation-duration:.75s;
+ animation-duration:.75s;
+ -webkit-animation-iteration-count: 1;
+ animation-iteration-count: 1;
+ -webkit-animation-timing-function: ease-out;
+ animation-timing-function: ease-in-out;
+ -webkit-animation-fill-mode: forwards;
+ animation-fill-mode: forwards;
+ -webkit-animation-delay: 0s;
+ animation-delay: 0s;
+}
+
+.initialPos {
+	margin-left:-25px;
+}
+
+#funds, #sessionTotal {
+	padding:.25em;
+	font-size:20px;
+	font-family:sans-serif;
+	position: relative;
+	-webkit-transition: all .5s ease-out;
+	transition: all .5s ease-out;
+}
+
+#funds > *, #sessionTotal > * {
+	text-align:center;
+	margin:0;
+	display:block;
+}
+
+#funds > span, #sessionTotal > span {
+	color:#fff;
+	font-weight:bold;
+	text-shadow:none;
+}
+
+#funds, .revealFunds {
+	cursor:pointer;
+}
+#funds {
+	display:none;
+	background:#e8a83d;
+	border-radius:6px;
+	top:-30px;
+	left:-20px;
+}
+
+.revealFunds {
+	position:absolute;
+	top:-30px;
+	left:-15px;
+	z-index:9999;
+}
+
+.revealFunds img {
+	max-height:33px;
+}
+
+#sessionTotal {
+	background: #33b7e6;
+	border-radius:8px;
+	display:none;
+}
+
+.circle, .cover {
+	z-index:9999999;
+	position:relative;
+}
+
+.fundsMeter {
+	height:0;
+	position:absolute;
+	bottom:0;
+	max-height:548px;
+	width:4px;
+	background:#e8a83d;
+	-webkit-transition:height 1s ease-in-out;
+	transition:height 1s ease-in-out;
+}
+
+#content {
+	-webkit-animation-duration:.5s!important;
+	animation-duration:.5s!important;
+}
+
+.centButton.flicked{
+	opacity:0!important;
+	-webkit-transform:rotateX(900deg);
+	transform:rotateX(900deg);
+	-webkit-transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+	transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
